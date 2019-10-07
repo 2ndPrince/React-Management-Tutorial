@@ -1,5 +1,5 @@
 ## Management System
-This project is developed as part of React tutorial.
+This project is developed as part of React tutorial..
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
