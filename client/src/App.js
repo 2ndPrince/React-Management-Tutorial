@@ -84,13 +84,15 @@ class App extends React.Component {
                 <TableCell>BIRTHDAY</TableCell>
                 <TableCell>GENDER</TableCell>
                 <TableCell>JOB</TableCell>
+                <TableCell>SETTING</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-            { this.state.customers ? this.state.customers.map(c=> { return ( <Customer key={c.id} id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job}/> )
+            { this.state.customers ? this.state.customers.map(c=> { 
+              return ( <Customer stateRefresh={this.stateRefresh} key={c.id} id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job}/> )
           }) : 
             <TableRow>
-              <TableCell colSpan="6" align="center">
+              <TableCell colSpan="7" align="center">
                 <CircularProgress className={classes.progress} variant="determinate" value={this.state.completed}/>
               </TableCell>
             </TableRow>
