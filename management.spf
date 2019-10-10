@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>management</string>
+			<key>host</key>
+			<string>management-tutorial.cfxannpvyh4b.us-east-2.rds.amazonaws.com</string>
+			<key>kcid</key>
+			<string>-4287418726401644403</string>
+			<key>name</key>
+			<string>management-tutorial.cfxannpvyh4b.us-east-2.rds.amazonaws.com</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>admin</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilter</key>
+			<dict/>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGtCwwZGhscHSEoLDA1OlUkbnVsbNMNDg8QFBhXTlMua2V5
+			c1pOUy5vYmplY3RzViRjbGFzc6MREhOAAoADgASjFRYXgAWABoAI
+			gAxUdHlwZVRyb3dzVGtleXNfECZTZWxlY3Rpb25EZXRhaWxUeXBl
+			UHJpbWFyeUtleWVkRGV0YWlsc9MNDg8eHyCgoIAH0iIjJCVaJGNs
+			YXNzbmFtZVgkY2xhc3Nlc18QE05TTXV0YWJsZURpY3Rpb25hcnmj
+			JCYnXE5TRGljdGlvbmFyeVhOU09iamVjdNIODykroSqACYAL0g8t
+			Li9ZTlMuc3RyaW5ngApSaWTSIiMxMl8QD05TTXV0YWJsZVN0cmlu
+			Z6MxMzRYTlNTdHJpbmdYTlNPYmplY3TSIiM2N15OU011dGFibGVB
+			cnJheaM2ODlXTlNBcnJheVhOU09iamVjdNIiIyY7oiY8WE5TT2Jq
+			ZWN0AAgAEQAaACQAKQAyADcASQBMAFEAUwBhAGcAbgB2AIEAiACM
+			AI4AkACSAJYAmACaAJwAngCjAKgArQDWAN0A3gDfAOEA5gDxAPoB
+			EAEUASEBKgEvATEBMwE1AToBRAFGAUkBTgFgAWQBbQF2AXsBigGO
+			AZYBnwGkAacAAAAAAAACAQAAAAAAAAA9AAAAAAAAAAAAAAAAAAAB
+			sA==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {890, 488}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>USE management;
+
+CREATE TABLE CUSTOMER (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	image VARCHAR(1024),
+	name VARCHAR(64),
+	birthday VARCHAR(64),
+	gender VARCHAR(64),
+	job VARCHAR(64)
+) DEFAULT CHARACTER SET UTF8 COLLATE utf8_general_ci;
+
+INSERT INTO CUSTOMER VALUES (1, 'https://placeimg.com/64/64/1', 'HongGil Dong', '880405', 'male', 'college student');
+INSERT INTO CUSTOMER VALUES (2, 'https://placeimg.com/64/64/2', 'King Sejong', '060831', 'male', 'king');
+INSERT INTO CUSTOMER VALUES (3, 'https://placeimg.com/64/64/3', 'Sunsil Lee', '230613', 'male', 'general');
+INSERT INTO CUSTOMER VALUES (4, 'https://placeimg.com/64/64/4', 'Rachel Lee', '120188', 'female', 'wife');
+INSERT INTO CUSTOMER VALUES (NULL, 'https://placeimg.com/64/64/5', 'Michael Yoyo', '123456', 'male', 'pet');
+
+SELECT * FROM CUSTOMER;
+
+ALTER TABLE CUSTOMER ADD createdDate DATETIME;
+ALTER TABLE CUSTOMER ADD isDeleted INT;
+
+UPDATE CUSTOMER SET createdDate = NOW();
+UPDATE CUSTOMER SET isDeleted = 0;
+
+DESC CUSTOMER;</string>
+			<key>table</key>
+			<string>CUSTOMER</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>257</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>DESC CUSTOMER</string>
+		<string>UPDATE CUSTOMER SET createdDate = NOW();
+UPDATE CUSTOMER SET isDeleted = 0</string>
+		<string>ALTER TABLE CUSTOMER ADD createdDate DATETIME;
+ALTER TABLE CUSTOMER ADD isDeleted INT</string>
+		<string>SELECT * FROM CUSTOMER</string>
+		<string>INSERT INTO CUSTOMER VALUES (NULL, 'https://placeimg.com/64/64/5', 'Michael Yoyo', '123456', 'male', 'pet')</string>
+		<string>INSERT INTO CUSTOMER VALUES (4, 'https://placeimg.com/64/64/4', 'Rachel Lee', '120188', 'female', 'wife')</string>
+		<string>INSERT INTO CUSTOMER VALUES (1, 'https://placeimg.com/64/64/1', 'HongGil Dong', '880405', 'male', 'college student');
+INSERT INTO CUSTOMER VALUES (2, 'https://placeimg.com/64/64/2', 'King Sejong', '060831', 'male', 'king');
+INSERT INTO CUSTOMER VALUES (3, 'https://placeimg.com/64/64/3', 'Sunsil Lee', '230613', 'male', 'general')</string>
+		<string>CREATE TABLE CUSTOMER (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	image VARCHAR(1024),
+	name VARCHAR(64),
+	birthday VARCHAR(64),
+	gender VARCHAR(64),
+	job VARCHAR(64)
+) DEFAULT CHARACTER SET UTF8 COLLATE utf8_general_ci</string>
+		<string>SELECT VERSION()</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.6.40-log</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
